@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ERD</h1>
+        <h2>ERD sümbolid</h2>
+        <img src = "images/sumbolid.png" width = 500>
+
+        <h2>ERD komponendid ja funktsioonid</h2>
+        
+        <p>Olemused (Entities):</p>
+        <ul>
+            <li>Olemused on reaalsed või kujuteldavad objektid, mida soovite andmebaasis jälgida.</li>
+            <li>Iga olemus esindab konkreetset andmekogumit, millel on omadused või atribuudid.</li>
+            <li>Näiteks võib klient olla üks olemus ja tal võivad olla atribuudid nagu nimi, aadress ja telefoninumber.</li>
+        </ul>
+        <img src="images/entity.png" width="500">
+        <p>Atribuudid (Attributes):</p>
+        <ul>
+            <li>Atribuudid on omadused, mis kirjeldavad olemusi.</li>
+            <li>Need on andmed, mida soovite iga olemuse kohta salvestada.</li>
+            <li>Iga atribuudi jaoks on määratud andmetüüp (nt tekst, number, kuupäev jne).</li>
+            <li>Näiteks klienti kirjeldavate atribuutide hulka võivad kuuluda eesnimi, perekonnanimi, telefoninumber jne.</li>
+        </ul>
+        <p>Suhted (Relationships):</p>
+        <ul>
+            <li>Suhted kirjeldavad seoseid erinevate olemuste vahel.</li>
+            <li>Need näitavad, kuidas üks olemus on seotud teisega.</li>
+            <li>Suhted võivad olla üks-ühele, üks-palju või palju-palju.</li>
+            <li>Näiteks võib klient olla seotud tellimusega, kus üks klient võib omada mitmeid tellimusi, moodustades seega üks-palju suhte.</li>
+        </ul>
+        <p>Võtmed (Keys):</p>
+        <ul>
+            <li>Võtmed on atribuudid või atribuutide kombinatsioonid, mille abil saab üheselt tuvastada iga olemuse eksemplari.</li>
+            <li>Primaarvõti (Primary Key) on ainulaadne võti, mida kasutatakse konkreetse olemuse eksemplari identifitseerimiseks.</li>
+            <li>Võõrvõti (Foreign Key) on võti, mis loob seose kahe erineva olemuse vahel, määratledes suhte.</li>
+            <li>Näiteks klientide tabelis võib kasutada klientide ID-d kui primaarvõtit ja tellimuste tabelis klientide ID-d kui võõrvõtit, et seostada iga tellimus konkreetse kliendiga.</li>
+        </ul>
+        <p>Mudelid (Models):</p>
+        <ul>
+            <li>Mudelid on ERD-skeemid, mis näitavad olemuste, nende atribuutide ja suhete vahelisi seoseid.</li>
+            <li>Need annavad ülevaate andmebaasi struktuurist ja aitavad arendajatel mõista, kuidas erinevad andmekogumid omavahel seotud on.</li>
+            <li>Mudelid võivad olla kõrgtasemelised (nt kontseptuaalsed mudelid) või detailsemad (nt füüsilised mudelid, mis kirjeldavad konkreetse andmebaasi struktuuri).</li>
+        </ul>
+        <p>Kardinaalsus (Cardinality):</p>
+        <ul>
+            <li>Kardinaalsus määratleb suhte entiteedi paari vahel, näidates, kui palju seotud objekte võib iga entiteet omada.</li>
+            <li>Funktsioon: Kirjeldab suhte omadusi ja määratleb, kui mitu entiteedi ühest poolest saab seotud olla teise poolega.</li>
+        </ul>
+        <h2>Diagrammi sümbolid</h2>
+        <img src="images/koik.png" width="500">
+        <h2>ERD kasutusviisid</h2>
+        <p>
+            Andmebaasi kavandamisel kasutatakse ER-diagramme seotud andmebaaside kavandamiseks ja nõuete määramiseks. Need aitavad selgitada loogikat ja ärireegleid ning rakendada sobivat tehnoloogiat.
+            <br>
+            Andmebaasi tõrkeotsingul kasutatakse ER-diagramme olemasolevate andmebaaside analüüsimiseks ja probleemide lahendamiseks.
+            <br>
+            Äriinfosüsteemides kasutatakse diagramme äriprotsessides kasutatavate andmebaaside kavandamiseks või analüüsimiseks. See võib aidata protsesse optimeerida ja parandada info kättesaadavust.
+            <br>
+            Äriprotsesside ümberkujundamisel (BPR) aitavad ER-diagrammid analüüsida äriprotsesside ümberkujundamisel kasutatavaid andmebaase ja uue andmebaasi seadistuse modelleerimisel.
+            <br>
+            Hariduses aitavad ER-diagrammid planeerida andmebaase hariduslikel eesmärkidel, võimaldades struktureeritud teabe salvestamist ja taastamist.
+            <br>
+            Teadustöös mängivad ER-diagrammid võtmerolli kasulike andmebaaside seadistamisel, mis aitavad analüüsida struktureeritud teadusandmeid.
+        </p>
+        <h2>ERD ajalugu</h2>
+        <p>
+            Peter Chen, tuntud ka kui Peter Pin-Shan Chen, oli Carnegie-Melloni Ülikooli õppejõud Pittsburghis, kes arendas välja ER-mudeli andmebaasi kavandamise jaoks 1970. aastatel. Kuigi andmete omavahelise seotuse kujutamine ulatub tagasi antiik-Kreekasse, kus seda mainiti Aristotelese, Sokratese ja Platoni töödes, ning hiljem nähti seda 19. ja 20. sajandi filosoofia-loogikute nagu Charles Sanders Peirce'i ja Gottlob Frege'i töödes, oli Peter Chen see, kes tõi selle idee praktilisse rakendusse andmebaasi kavandamisel. 1970. aastatel töötasid Charles Bachman ja A.P.G. Brown tihedalt koos Peter Cheni lähenemise eelkäijatega. Bachman arendas välja andmestruktuuri diagrammi tüübi, mida tuntakse Bachman Diagrammina ja mis sai nime tema järgi.
+        </p>
+        <h2>Lisad</h2>
+        <img src="images/koik1.PNG" width="500">
+        <img src="images/koik2.png" width="500">
+    </div>
+</body>
+</html>
